@@ -16,7 +16,7 @@ contract VotingApp {
     uint private proposalCounter;
 
     constructor() {
-        _admin = tx.origin;
+        _admin = msg.sender;
     }
 
     function createProposal(string calldata _description) external {
